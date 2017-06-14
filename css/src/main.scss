@@ -132,7 +132,7 @@ $yellow: #FFF200;
 	background: $teal;
 	color: white;
 	text-align: center;
-	padding: 15px 20px;
+	padding: 10px 20px;
 
 	a {
 		color: white;
@@ -140,6 +140,11 @@ $yellow: #FFF200;
 
 	img {
 		float: right;
+	}
+
+	span {
+		display: block;
+		padding: 5px;
 	}
 }
 
