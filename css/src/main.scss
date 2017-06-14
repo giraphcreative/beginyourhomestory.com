@@ -1,0 +1,183 @@
+
+
+// color variables
+$grey: #414042;
+$blue: #0E426A;
+$blue-dark: #214099;
+$teal: #27AAE1;
+$green: #66BD5A;
+$lime: #A2CE4D;
+$yellow: #FFF200;
+
+
+@import "reset";
+
+@import "fonts";
+
+@import "mixins";
+
+@import "base";
+
+@import "grid";
+
+
+
+// background-container
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	box-shadow: 0 0 30px rgba( black, .2 );
+	background: url(../img/bg-canvas.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+
+.content {
+	position: relative;
+	text-align: center;
+	
+	@include respond-to( 600px ) {
+		.logo {
+			position: absolute;
+			bottom: 10px;
+			right: 30px;
+			max-width: 40%;
+		}
+
+		.ask {
+			position: absolute;
+			bottom: 20px;
+			left: 0;
+			max-width: 50%;
+		}
+	}
+	
+	@include respond-to( 840px ) {
+		.logo {
+			position: absolute;
+			bottom: 10px;
+			right: 30px;
+			max-width: 40%;
+		}
+
+		.ask {
+			position: absolute;
+			bottom: 20px;
+			left: 0;
+			max-width: 60%;
+		}
+	}
+}
+
+
+// main content container
+.main {
+	padding: 20px;
+	color: $blue-dark;
+
+	.twenty {
+		text-align: center;
+	}
+
+	.eighty {
+		text-align: center;
+	}
+
+	.button {
+		padding: 20px;
+	}
+
+	h3 {
+		padding: 5px 0;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	p {
+		padding: 5px 0 30px;
+	}
+
+	@include respond-to( 600px ) {
+		text-align: left;
+		padding: 20px 50px 20px 40px;
+
+		.twenty {
+			padding-right: 10px;
+			float: left;
+			width: 20%;
+		}
+
+		.eighty {
+			text-align: left;
+			float: left;
+			width: 80%;
+		}
+
+		.button {
+			padding: 25px 30px 100px;
+		}
+	}
+
+	@include respond-to( 840px ) {
+		padding: 20px 80px;
+
+		.button {
+			padding: 25px 40px 160px;
+		}
+	}
+}
+
+
+.footer {
+	background: $teal;
+	color: white;
+	text-align: center;
+	padding: 15px 20px;
+
+	a {
+		color: white;
+	}
+
+	img {
+		float: right;
+	}
+}
+
+
+// colors
+.bg-blue { background: $blue; }
+.bg-blue-dark { background: $blue-dark; }
+.bg-teal { background: $teal; }
+.bg-green { background: $green; }
+.bg-lime { background: $lime; }
+
+
+
+// button styles
+input[type=submit], button, .btn {
+	@include font-title;
+	padding: 15px;
+	background: $lime;
+	color: $blue-dark;
+	border: 0;
+	border-radius: 10px;
+	font-size: 1.4em;
+	line-height: 1.6em;
+	margin: 0 5px;
+	text-transform: uppercase;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	
+	&:hover {
+		opacity: .9;
+	}
+
+	@include respond-to( 768px ) {
+		max-width: 50%;
+		margin: 30px auto;
+	}
+}
+
+
+
